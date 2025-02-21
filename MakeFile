@@ -1,0 +1,39 @@
+DED_FLAGS=-Wall -Wextra -Weffc++ -Wcast-align -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wfloat-equal -Wformat-security -Wformat=2 -Wignored-qualifiers -Winit-self -Winline -Wlogical-op -Wmain -Wmissing-declarations -Wno-missing-field-initializers -Wmissing-include-dirs -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wredundant-decls -Wshadow -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wswitch-default -Wswitch-enum -Wtype-limits -Wundef -Wunreachable-code -Wwrite-strings -fexceptions -g -pipe -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC
+FILE_OBJECTS=main.o stack_Constructor.o stack_Destructor.o stack_check.o stack_Dump.o stack_Pop.o stackPush.o
+
+all: stack
+
+stack: main.o stack_Constructor.o stack_Destructor.o stack_check.o stack_Dump.o stack_Pop.o stackPush.o
+	@g++ $(DED_FLAGS) $(FILE_OBJECTS) -o stack
+
+main.o: main.cpp
+	@g++ $(DED_FLAGS) -c main.cpp -o main.o
+	@echo "[CXX] main"
+
+stack_Constructor.o: stack_Constructor.cpp
+	@g++ $(DED_FLAGS) -c stack_Constructor.cpp -o stack_Constructor.o
+	@echo "[CXX] stack_Constructor"
+
+stack_Destructor.o: stack_Destructor.cpp
+	@g++ $(DED_FLAGS) -c stack_Destructor.cpp -o stack_Destructor.o
+	@echo "[CXX] stack_Destructor"
+
+stack_check.o: stack_check.cpp
+	@g++ $(DED_FLAGS) -c stack_check.cpp -o stack_check.o
+	@echo "[CXX] stack_check"
+
+stack_Dump.o: stack_Dump.cpp
+	@g++ $(DED_FLAGS) -c stack_Dump.cpp -o stack_Dump.o
+	@echo "[CXX] stack_Dump"
+
+stack_Pop.o: stack_Pop.cpp
+	@g++ $(DED_FLAGS) -c stack_Pop.cpp -o stack_Pop.o
+	@echo "[CXX] stack_Pop"
+
+stackPush.o: stackPush.cpp
+	@g++ $(DED_FLAGS) -c stackPush.cpp -o stackPush.o
+	@echo "[CXX] stackPush"
+
+clean:
+	rm -rf *.o
+	rm -rf *.exe

@@ -17,16 +17,14 @@ int main()
 
     stack_Dump(&stack_inf);
     printf("\n\n");
-    stack_elem a = stack_Pop(&stack_inf);
     
-    printf("%lg\n", a);
+    printf("%lg\n", stack_Pop(&stack_inf));
+    
     stack_Dump(&stack_inf);
 
     stack_Pop(&stack_inf);
-
-    a = stack_Pop(&stack_inf);
     
-    printf("%lg\n", a);
+    printf("%lg\n", stack_Pop(&stack_inf));
 
     stack_Destructor(&stack_inf);
     stack_Dump(&stack_inf);

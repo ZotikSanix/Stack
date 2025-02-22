@@ -9,6 +9,7 @@
 
 int stack_check(stack *stk)
 {
+    
     if (stk == NULL)
         return -1;
     if (stk->data == NULL)

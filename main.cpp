@@ -19,15 +19,15 @@ int main()
     printf("\n\n");
     
     printf("%lg\n", stack_Pop(&stack_inf));
-    
-    stack_Dump(&stack_inf);
 
-    stack_Pop(&stack_inf);
+    stack_Dump(&stack_inf);
+    printf("\n\n");
     
     printf("%lg\n", stack_Pop(&stack_inf));
 
-    stack_Destructor(&stack_inf);
     stack_Dump(&stack_inf);
+
+    stack_Destructor(&stack_inf);
 }
 
 

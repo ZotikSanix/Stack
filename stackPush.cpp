@@ -23,6 +23,7 @@ int stackPush(stack *stk, stack_elem value)
         stk->data[stk->size + 1] = 0;
         stk->capacity = (stk->capacity) * 2 ;
         stk->data = (stack_elem*) realloc(stk->data, (stk->capacity + 2)*sizeof(stack_elem));
+        
         stk->data[stk->capacity + 1] = kryptonite;
     }
 

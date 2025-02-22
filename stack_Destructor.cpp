@@ -9,10 +9,12 @@
 
 int stack_Destructor(stack *stk)
 {
+    // TODO verificator
+
     free(stk->data);
     stk->size = 0;
     stk->capacity = 0;
-    stk->data = 0;
+    stk->data = nullptr;
 
     return 0;
 

@@ -16,9 +16,10 @@ int main()
     stackPush(&stack_inf, 19);
 
     stack_Dump(&stack_inf);
-        
+    
     printf("%lg\n", stack_Pop(&stack_inf));
     printf("\n\n");
+    
 
     stack_Dump(&stack_inf);
     

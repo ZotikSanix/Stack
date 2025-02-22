@@ -24,9 +24,9 @@ stack_elem stack_Pop(stack *stk)
     stk->data[stk->size + 1] = 0;
 
 
-    if (stk->size <= (stk->capacity)/4)
+    if (stk->size <= (stk->capacity)/4) // FIXME check 0 capacity
     {
-        
+
         stk->data = (stack_elem*) realloc(stk->data, ((stk->capacity)/4 + 2)*sizeof(stack_elem));
         stk->capacity = (stk->capacity/4);
 

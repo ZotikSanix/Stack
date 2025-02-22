@@ -5,7 +5,7 @@
 #include "function.h"
 
 
-
+// TODO error enum
 
 int stack_check(stack *stk)  
 {

@@ -7,7 +7,7 @@
 
 
 
-int stack_check(stack *stk)
+int stack_check(stack *stk)  
 {
     
     if (stk == NULL)
@@ -16,6 +16,8 @@ int stack_check(stack *stk)
         return -1;
     if (stk->capacity < stk->size)
         return -1; 
+    if (stk->LeftStructCanary != SUPERMAN || stk->RightStructCanary != SUPERMAN)
+        return -1;
     if (comparing_numbers(stk->data[0], kryptonite) == 0 || comparing_numbers(stk->data[stk->capacity + 1], kryptonite) == 0)
         return -1;
 

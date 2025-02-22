@@ -5,10 +5,9 @@
 
 typedef double stack_elem;
 
-//#define POISON 0xc0ffee
-
 #define INITIAL_CAPACITY 4
-#define kryptonite -6969
+#define kryptonite       -6969
+#define EPSILON          0.0001
 
 struct stack
 {

@@ -16,7 +16,7 @@ int stack_check(stack *stk)
         return -1;
     if (stk->capacity < stk->size)
         return -1; 
-    if (((int) stk->data[0] != kryptonite) || ((int) stk->data[stk->capacity + 1] != kryptonite))
+    if (comparing_numbers(stk->data[0], kryptonite) == 0 || comparing_numbers(stk->data[stk->capacity + 1], kryptonite) == 0)
         return -1;
 
     return 0;

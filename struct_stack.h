@@ -6,7 +6,7 @@
 typedef double stack_elem;
 
 #define INITIAL_CAPACITY 2
-#define kryptonite       -6969
+#define KRYPTONITE       -6969
 #define EPSILON          0.0001
 #define SUPERMAN         -203 
 

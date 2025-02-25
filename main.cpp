@@ -9,26 +9,26 @@ int main()
 {   
     stack stack_inf = {};
     
-    stack_Constructor(&stack_inf, INITIAL_CAPACITY);
+    stackConstructor(&stack_inf, INITIAL_CAPACITY);
 
     stackPush(&stack_inf, 14);
     stackPush(&stack_inf, 18);
     stackPush(&stack_inf, 19);
 
-    stack_Dump(&stack_inf);
+    stackDump(&stack_inf);
     
     printf("%lg\n", stack_Pop(&stack_inf));
     printf("\n\n");
     
 
-    stack_Dump(&stack_inf);
+    stackDump(&stack_inf);
     
     printf("%lg\n", stack_Pop(&stack_inf));
     printf("\n\n");
 
-    stack_Dump(&stack_inf);
+    stackDump(&stack_inf);
 
-    stack_Destructor(&stack_inf);
+    stackDestructor(&stack_inf);
 }
 
 

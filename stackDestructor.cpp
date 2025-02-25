@@ -7,7 +7,7 @@
 
 
 
-int stack_Destructor(stack *stk)
+int stackDestructor(stack *stk)
 {
     // TODO verificator
 

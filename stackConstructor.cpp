@@ -9,7 +9,7 @@
 
 
 
-int stack_Constructor(stack *stk, size_t capacity)      
+int stackConstructor(stack *stk, size_t capacity)      
 {
     assert(stk);
 
@@ -17,8 +17,8 @@ int stack_Constructor(stack *stk, size_t capacity)
     stk->size = 0;
     stk->capacity = capacity;
     
-    stk->data[0] = kryptonite;
-    stk->data[capacity + 1] = kryptonite;
+    stk->data[0] = KRYPTONITE;
+    stk->data[capacity + 1] = KRYPTONITE;
 
     stk->LeftStructCanary = SUPERMAN;
     stk->RightStructCanary = SUPERMAN;

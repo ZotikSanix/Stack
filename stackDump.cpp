@@ -6,7 +6,7 @@
 
 
 
-void stack_Dump(stack *stk)
+void stackDump(stack *stk)
 {
     if(stack_check(stk) == -1)
     {

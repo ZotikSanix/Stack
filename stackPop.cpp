@@ -30,7 +30,7 @@ stack_elem stack_Pop(stack *stk)
         stk->data = (stack_elem*) realloc(stk->data, ((stk->capacity)/4 + 2)*sizeof(stack_elem));
         stk->capacity = (stk->capacity/4);
 
-        stk->data[stk->capacity + 1] = kryptonite;
+        stk->data[stk->capacity + 1] = KRYPTONITE;
     }
 
     return value;

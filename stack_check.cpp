@@ -8,7 +8,7 @@
 // TODO error enum
 
 int stack_check(stack *stk)  
-{
+{ 
     
     if (stk == NULL)
         return -1;
@@ -18,7 +18,7 @@ int stack_check(stack *stk)
         return -1; 
     if (stk->LeftStructCanary != SUPERMAN || stk->RightStructCanary != SUPERMAN)
         return -1;
-    if (comparing_numbers(stk->data[0], kryptonite) == 0 || comparing_numbers(stk->data[stk->capacity + 1], kryptonite) == 0)
+    if (comparing_numbers(stk->data[0], KRYPTONITE) == 0 || comparing_numbers(stk->data[stk->capacity + 1], KRYPTONITE) == 0)
         return -1;
 
     return 0;
